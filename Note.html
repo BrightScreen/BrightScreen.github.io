@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One Chance</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: pink;
+      color: #333; 
+      margin: 0;
+      padding: 0;
+    }
+    #main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 90vh; 
+    }
+    #question {
+      color: #f00; 
+      text-align: center;
+      font-size: 20px; 
+      margin-bottom: 10px;
+    }
+    .question-text {
+      font-size: 24px; 
+    }
+    .btn {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      text-transform: uppercase; 
+    }
+    #yes-btn {
+      background-color: #33cc33; 
+      color: white;
+    }
+    #no-btn {
+      background-color: #ff6666; 
+      color: white;
+    }
+  </style>
+  <style>
+    @keyframes moveAwayAnimation {
+      0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+    }
+
+    #no-btn.move-away {
+      animation: moveAwayAnimation 1s ease forwards;
+    }
+  </style>
+</head>
+<body>
+  <div id="main-container">
+    <div id="question">
+      आजा, मेरी जान-ए-जाँ, तेरे बिना हूँ मैं क्या भला?<br>
+      यारा, अब आ भी जा, आजा ना<br>
+      मेरी इन बाँहों में तेरी ही तो है जगह<br>
+      जानाँ, अब मान जा, आजा ना
+    </div>
+    <div class="question-text">Anwesha, can you give me one chance?</div>
+    <button id="yes-btn" class="btn" onclick="redirectToDM()">Yes</button>
+    <button id="no-btn" class="btn" onclick="moveAway()">No</button>
+  </div>
+
+  <audio autoplay>
+    <source src="YOUR_AUDIO_FILE.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function redirectToDM() {
+      window.location.href = "https://www.instagram.com/kartikaysharma2033?igsh=MTRocmt2cnFkNTJxYQ=="; // 
+    }
+
+    function moveAway() {
+      document.getElementById('no-btn').classList.add('move-away');
+      setTimeout(() => {
+        document.getElementById('no-btn').classList.remove('move-away');
+      }, 1500); // 
+    }
+  </script>
+</body>
+</html>
